@@ -51,7 +51,7 @@ public class sistemaBasicoRegistroEstudiantes {
     private static int leerEntero(Scanner input, String mensaje) {
         System.out.print(mensaje);
         while (!input.hasNextInt()) {
-            System.out.println("⚠ Entrada inválida. Intente de nuevo.");
+            System.out.println("Entrada inválida. Intente de nuevo.");
             input.nextLine(); // limpiar entrada inválida
             System.out.print(mensaje);
         }
@@ -91,7 +91,7 @@ public class sistemaBasicoRegistroEstudiantes {
 
     public static void mostrarInfoEstudiante() {
         if (nombreActual.equals("N/A")) {
-            System.out.println("⚠️  No se ha registrado ningún estudiante aún.");
+            System.out.println(" No se ha registrado ningún estudiante aún.");
         } else {
             System.out.printf("""
                     ─────────────────────────────
@@ -109,4 +109,5 @@ public class sistemaBasicoRegistroEstudiantes {
     public static double calcularPromedioEstudiante() {
         return (nota1Actual + nota2Actual + nota3Actual) / 3.0;
     }
+
 }
