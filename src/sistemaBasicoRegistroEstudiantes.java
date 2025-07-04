@@ -14,7 +14,7 @@ public class sistemaBasicoRegistroEstudiantes {
     }
 
     private static void mostrarMenu(Scanner sc) {
-        boolean salir = false;
+        var salir = false;
         do {
             System.out.println("--- Sistema de Registro de Estudiantes ---");
             System.out.println("""
