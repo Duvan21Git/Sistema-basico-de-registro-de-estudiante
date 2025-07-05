@@ -80,13 +80,23 @@ public class sistemaBasicoRegistroEstudiantes {
             if (sc.hasNextDouble()) {
                 double n = sc.nextDouble();
                 sc.nextLine(); // consumir el salto de línea pendiente
-                return n;
+                // ✔ Validar el rango de la nota
+                if (validarNota(n)) {
+                    return n;
+                } else {
+                    System.out.println("⚠ Nota fuera de rango. Debe estar entre 0 y 100.");
+                }
 
             } else {
                 System.out.println("⚠ Entrada inválida. Intente de nuevo.");
                 sc.nextLine(); // limpiar entrada incorrecta
             }
+
         }
+    }
+
+    private static boolean validarNota(double nota) {
+        return nota >= 0 && nota <= 100;
     }
 
     public static void mostrarInfoEstudiante() {
@@ -109,4 +119,5 @@ public class sistemaBasicoRegistroEstudiantes {
     public static double calcularPromedioEstudiante() {
         return (nota1Actual + nota2Actual + nota3Actual) / 3.0;
     }
+
 }
